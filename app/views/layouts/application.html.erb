@@ -8,7 +8,14 @@
 </head>
 <body>
   <nav>
-    <%= link_to "Sign in with Github", user_github_omniauth_authorize_path %>
+    <% if current_user %>
+      <p>Welcome <%= current_user.email %> </p>
+    <% else %>
+      <%= link_to "Sign in with Github", user_github_omniauth_authorize_path %>
+      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+    <% end %>
+    
+
   </nav>
 
 <%= yield %>

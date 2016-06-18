@@ -48,3 +48,4 @@ end
 
 gem 'devise'
 gem 'omniauth-github'
+gem 'omniauth-facebook'
